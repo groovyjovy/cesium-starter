@@ -1,0 +1,15 @@
+services:
+  front:
+    image: node:latest
+    tty: true
+    working_dir: /app/vite-project
+    volumes:
+      - ./front:/app
+    ports:
+      - 5174:5173
+    command: /bin/bash
+    # command:
+    #   - /bin/bash
+    #   - -c
+    #   - |
+    #     npm run dev

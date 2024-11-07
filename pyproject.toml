@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "cesium-starter"
+version = "0.1.0"
+description = ""
+authors = ["groovyjovy <sasaki@mierune.co.jp>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+xmltodict = "^0.14.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

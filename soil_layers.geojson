@@ -1,0 +1,189 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    141.89763033333332,
+                    42.746032666666665
+                ]
+            },
+            "properties": {
+                "soil_symbol": "MS",
+                "soil_name": "礫混じり砂質シルト",
+                "soil_tone": "黒褐",
+                "depth_range": "0m - 0.2m",
+                "half_depth": 0.1,
+                "top_height": 30.15,
+                "middle_height": 30.049999999999997,
+                "bottom_height": 29.95,
+                "radius": 1,
+                "latitude": 42.746032666666665,
+                "longitude": 141.89763033333332
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    141.89763033333332,
+                    42.746032666666665
+                ]
+            },
+            "properties": {
+                "soil_symbol": "MS",
+                "soil_name": "砂質シルト",
+                "soil_tone": "灰褐",
+                "depth_range": "0.2m - 0.45m",
+                "half_depth": 0.125,
+                "top_height": 29.95,
+                "middle_height": 29.825,
+                "bottom_height": 29.7,
+                "radius": 1,
+                "latitude": 42.746032666666665,
+                "longitude": 141.89763033333332
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    141.89763033333332,
+                    42.746032666666665
+                ]
+            },
+            "properties": {
+                "soil_symbol": "M-S",
+                "soil_name": "砂混じりシルト",
+                "soil_tone": "暗灰",
+                "depth_range": "0.45m - 0.9m",
+                "half_depth": 0.225,
+                "top_height": 29.7,
+                "middle_height": 29.474999999999998,
+                "bottom_height": 29.25,
+                "radius": 1,
+                "latitude": 42.746032666666665,
+                "longitude": 141.89763033333332
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    141.89763033333332,
+                    42.746032666666665
+                ]
+            },
+            "properties": {
+                "soil_symbol": "M",
+                "soil_name": "有機物混じりシルト",
+                "soil_tone": "灰褐",
+                "depth_range": "0.9m - 1.9m",
+                "half_depth": 0.49999999999999994,
+                "top_height": 29.25,
+                "middle_height": 28.75,
+                "bottom_height": 28.25,
+                "radius": 1,
+                "latitude": 42.746032666666665,
+                "longitude": 141.89763033333332
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    141.89763033333332,
+                    42.746032666666665
+                ]
+            },
+            "properties": {
+                "soil_symbol": "FSM",
+                "soil_name": "シルト質細砂",
+                "soil_tone": "暗灰",
+                "depth_range": "1.9m - 2.5m",
+                "half_depth": 0.30000000000000004,
+                "top_height": 28.25,
+                "middle_height": 27.95,
+                "bottom_height": 27.65,
+                "radius": 1,
+                "latitude": 42.746032666666665,
+                "longitude": 141.89763033333332
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    141.89763033333332,
+                    42.746032666666665
+                ]
+            },
+            "properties": {
+                "soil_symbol": "MO",
+                "soil_name": "有機質シルト",
+                "soil_tone": "暗褐",
+                "depth_range": "2.5m - 2.9m",
+                "half_depth": 0.19999999999999996,
+                "top_height": 27.65,
+                "middle_height": 27.45,
+                "bottom_height": 27.25,
+                "radius": 1,
+                "latitude": 42.746032666666665,
+                "longitude": 141.89763033333332
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    141.89763033333332,
+                    42.746032666666665
+                ]
+            },
+            "properties": {
+                "soil_symbol": "Ms",
+                "soil_name": "風化泥岩",
+                "soil_tone": "暗灰",
+                "depth_range": "2.9m - 4.0m",
+                "half_depth": 0.55,
+                "top_height": 27.25,
+                "middle_height": 26.7,
+                "bottom_height": 26.15,
+                "radius": 1,
+                "latitude": 42.746032666666665,
+                "longitude": 141.89763033333332
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    141.89763033333332,
+                    42.746032666666665
+                ]
+            },
+            "properties": {
+                "soil_symbol": "Ms",
+                "soil_name": "泥岩",
+                "soil_tone": "暗灰",
+                "depth_range": "4.0m - 9.0m",
+                "half_depth": 2.5,
+                "top_height": 26.15,
+                "middle_height": 23.65,
+                "bottom_height": 21.15,
+                "radius": 1,
+                "latitude": 42.746032666666665,
+                "longitude": 141.89763033333332
+            }
+        }
+    ]
+}
