@@ -62,3 +62,27 @@ Cesium.GeoJsonDataSource.load('soil_layers.geojson', {
 
     viewer.zoomTo(dataSource);
 });
+
+// ボタン要素の作成とスタイル設定
+const button = document.createElement('button');
+button.className = 'cesium-button'; // Cesiumのスタイルをベースに使用
+button.textContent = '選択モードを開始';
+button.style.position = 'absolute';
+button.style.top = '10px';
+button.style.left = '10px'; // 左側に配置
+button.style.padding = '8px 16px';
+button.style.backgroundColor = '#007bff';
+button.style.color = '#fff';
+button.style.border = 'none';
+button.style.borderRadius = '4px';
+button.style.cursor = 'pointer';
+button.style.zIndex = '100';
+viewer.container.appendChild(button);
+
+// ボタンのクリックで選択モードをトグル
+let isSelectMode = false;
+button.addEventListener('click', () => {
+    isSelectMode = !isSelectMode;
+    button.textContent = isSelectMode ? '選択モード中' : '選択モードを開始';
+});
+
