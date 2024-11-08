@@ -2,26 +2,63 @@ import './style.css'
 import 'cesium/Build/Cesium/Widgets/widgets.css';
 import * as Cesium from 'cesium';
 
-const m_mono: any = new Cesium.UrlTemplateImageryProvider({
-    url: 'https://tile.mierune.co.jp/mierune_mono/{z}/{x}/{y}.png',
-    credit: new Cesium.Credit(
-        "Maptiles by <a href='http://mierune.co.jp' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."
-    ),
-});
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlODM1NDVmOS1lMjkzLTRmYjgtYjM4OS03ZThlZmY5MTYxZWEiLCJpZCI6MjQ4MTg4LCJpYXQiOjE3Mjg5NzExNTZ9.TZ0S4c0zctKibuuH-GuUHB9ZWlAW5v0nxES73-C4xCQ';
+Cesium.Ion.defaultAccessToken = token;
 
-const viewer = new Cesium.Viewer('map', {
-    baseLayerPicker: false,
-    geocoder: false,
-    homeButton: false,
-    timeline: false,
-    animation: false,
-    baseLayer: Cesium.ImageryLayer.fromProviderAsync(m_mono,{}),
+const viewer = new Cesium.Viewer("map", {
+//   terrainProvider: await Cesium.CesiumTerrainProvider.fromIonAssetId(
+//     1,
+//   ),
+//   terrainProvider: new NumericalPngTerrainProvider(),,
+  scene3DOnly: true,
+  selectionIndicator: false,
+  baseLayerPicker: false,
+  animation: false,
+  timeline: false,
+  terrainProvider: undefined,   // 地形を無効化
 });
+viewer.scene.globe.depthTestAgainstTerrain = true;
 
+// カメラの位置を地球にズームするように初期化
 viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(139.5, 33.0, 100000.0),
+    destination: Cesium.Cartesian3.fromDegrees(141.89773033333333, 42.746032666666665, 100),  // 経度、緯度、高度
     orientation: {
-        pitch: -0.3,
-        roll: -0.25,
-    },
+        heading: Cesium.Math.toRadians(0.0),    // カメラの向き（方位角）
+        pitch: Cesium.Math.toRadians(-30.0),    // カメラを下向きにする（-90度）
+        roll: 0.0                              // ロール角
+    }
+});
+
+// GeoJSON ファイルの読み込みと表示
+Cesium.GeoJsonDataSource.load('soil_layers.geojson', {
+    clampToGround: false
+}).then(function(dataSource) {
+    viewer.dataSources.add(dataSource);
+    dataSource.entities.values.forEach(function(entity) {
+            const topHeight = entity.properties?.top_height.getValue();
+            const bottomHeight = entity.properties?.bottom_height.getValue();
+            const middleHeight = entity.properties?.middle_height.getValue();
+            const radius = entity.properties?.radius.getValue();
+            const latitude = entity.properties?.latitude.getValue();
+            const longitude = entity.properties?.longitude.getValue();
+
+            console.log(entity.position);
+            entity.position = Cesium.Cartesian3.fromDegrees(longitude, latitude, middleHeight);
+            entity.cylinder = new Cesium.CylinderGraphics({
+                length: topHeight - bottomHeight,
+                topRadius: radius,
+                bottomRadius: radius,
+                material: Cesium.Color.fromRandom({ alpha: 0.6 }),
+                outline: true,
+                outlineColor: Cesium.Color.BLACK,
+                outlineWidth: 2,
+                numberOfVerticalLines: 16,
+            });
+
+            // 元のポイントを非表示
+            entity.point = undefined;
+        // }
+    });
+
+    viewer.zoomTo(dataSource);
 });
