@@ -3,7 +3,7 @@ import 'cesium/Build/Cesium/Widgets/widgets.css';
 import * as Cesium from 'cesium';
 import { NumericalPngTerrainProvider } from './NumericalPngTerrainProvider';
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlODM1NDVmOS1lMjkzLTRmYjgtYjM4OS03ZThlZmY5MTYxZWEiLCJpZCI6MjQ4MTg4LCJpYXQiOjE3Mjg5NzExNTZ9.TZ0S4c0zctKibuuH-GuUHB9ZWlAW5v0nxES73-C4xCQ';
+const token = '';
 Cesium.Ion.defaultAccessToken = token;
 
 const viewer = new Cesium.Viewer("map", {
