@@ -1,0 +1,281 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": "FI",
+                "soil_name": "埋土",
+                "soil_tone": "黄褐",
+                "depth_range": "0m - 5.0m",
+                "half_depth": 2.5,
+                "top_height": 3.22,
+                "middle_height": 0.7200000000000002,
+                "bottom_height": -1.7799999999999998,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": null,
+                "soil_name": "砂利・礫混り砂質土",
+                "soil_tone": "暗灰",
+                "depth_range": "5.0m - 6.6m",
+                "half_depth": 0.7999999999999998,
+                "top_height": -1.7799999999999998,
+                "middle_height": -2.5799999999999996,
+                "bottom_height": -3.3799999999999994,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": "C",
+                "soil_name": "粘性土",
+                "soil_tone": "暗灰",
+                "depth_range": "6.6m - 9.5m",
+                "half_depth": 1.4500000000000002,
+                "top_height": -3.3799999999999994,
+                "middle_height": -4.83,
+                "bottom_height": -6.279999999999999,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": "SF",
+                "soil_name": "砂質土",
+                "soil_tone": "暗灰",
+                "depth_range": "9.5m - 12.0m",
+                "half_depth": 1.25,
+                "top_height": -6.279999999999999,
+                "middle_height": -7.529999999999999,
+                "bottom_height": -8.78,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": "C",
+                "soil_name": "粘性土",
+                "soil_tone": "暗灰",
+                "depth_range": "12.0m - 14.3m",
+                "half_depth": 1.1500000000000004,
+                "top_height": -8.78,
+                "middle_height": -9.93,
+                "bottom_height": -11.08,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": "C",
+                "soil_name": "粘性土",
+                "soil_tone": "暗灰",
+                "depth_range": "14.3m - 17.0m",
+                "half_depth": 1.3499999999999996,
+                "top_height": -11.08,
+                "middle_height": -12.43,
+                "bottom_height": -13.78,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": "VA",
+                "soil_name": "火山灰",
+                "soil_tone": "淡灰",
+                "depth_range": "17.0m - 17.6m",
+                "half_depth": 0.3000000000000007,
+                "top_height": -13.78,
+                "middle_height": -14.08,
+                "bottom_height": -14.38,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": "C",
+                "soil_name": "粘性土",
+                "soil_tone": "暗灰",
+                "depth_range": "17.6m - 18.2m",
+                "half_depth": 0.29999999999999893,
+                "top_height": -14.38,
+                "middle_height": -14.679999999999998,
+                "bottom_height": -14.979999999999999,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": null,
+                "soil_name": "砂利・礫混り砂質土",
+                "soil_tone": "暗灰",
+                "depth_range": "18.2m - 20.8m",
+                "half_depth": 1.3000000000000007,
+                "top_height": -14.979999999999999,
+                "middle_height": -16.28,
+                "bottom_height": -17.580000000000002,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": "C",
+                "soil_name": "粘性土",
+                "soil_tone": "暗灰",
+                "depth_range": "20.8m - 21.15m",
+                "half_depth": 0.17499999999999893,
+                "top_height": -17.580000000000002,
+                "middle_height": -17.755000000000003,
+                "bottom_height": -17.93,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": null,
+                "soil_name": "砂利・礫混り砂質土",
+                "soil_tone": "灰",
+                "depth_range": "21.15m - 23.5m",
+                "half_depth": 1.1750000000000007,
+                "top_height": -17.93,
+                "middle_height": -19.105,
+                "bottom_height": -20.28,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.29019305555556,
+                    33.40555972222222
+                ]
+            },
+            "properties": {
+                "soil_symbol": null,
+                "soil_name": "砂利・礫混り砂質土",
+                "soil_tone": "青灰",
+                "depth_range": "23.5m - 28.0m",
+                "half_depth": 2.25,
+                "top_height": -20.28,
+                "middle_height": -22.53,
+                "bottom_height": -24.78,
+                "radius": 1,
+                "latitude": 33.40555972222222,
+                "longitude": 133.29019305555556
+            }
+        }
+    ]
+}
