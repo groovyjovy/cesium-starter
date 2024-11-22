@@ -3,7 +3,7 @@ import 'cesium/Build/Cesium/Widgets/widgets.css';
 import * as Cesium from 'cesium';
 import { NumericalPngTerrainProvider } from './NumericalPngTerrainProvider';
 
-const token = '';
+const token = import.meta.env.VITE_API_KEY;
 Cesium.Ion.defaultAccessToken = token;
 
 const viewer = new Cesium.Viewer("map", {
@@ -198,3 +198,31 @@ document.getElementById('applyButton').addEventListener('click', () => {
     viewer.scene.postProcessStages.removeAll(); // 既存のステージを削除
     viewer.scene.postProcessStages.add(stage);  // 新しいステージを追加
 });
+
+// 初回実行
+logCurrentViewRectangle();
+
+// カメラが移動した後に範囲を出力
+viewer.camera.moveEnd.addEventListener(() => {
+  logCurrentViewRectangle();
+});
+
+
+
+// ビューポートの範囲を計算してコンソールに出力する関数
+function logCurrentViewRectangle() {
+    const rectangle = viewer.camera.computeViewRectangle();
+  
+    if (rectangle) {
+      const boundingBox = {
+        west: Cesium.Math.toDegrees(rectangle.west),  // 最西端の経度
+        south: Cesium.Math.toDegrees(rectangle.south), // 最南端の緯度
+        east: Cesium.Math.toDegrees(rectangle.east),  // 最東端の経度
+        north: Cesium.Math.toDegrees(rectangle.north) // 最北端の緯度
+      };
+  
+      console.log("現在の視野範囲 (Bounding Box):", boundingBox);
+    } else {
+      console.log("現在の視野範囲を取得できませんでした。");
+    }
+  }

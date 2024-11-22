@@ -12,7 +12,6 @@ def main():
         with open(f'{file}.geojson', 'w', encoding='utf-8') as geojson_file:
             json.dump(geojson, geojson_file, ensure_ascii=False, indent=4)
 
-
 def convert_to_geojson(data_dict):
     # 孔口の標高
     top_level = float(data_dict["ボーリング情報"]["標題情報"]["ボーリング基本情報"]["孔口標高"])
