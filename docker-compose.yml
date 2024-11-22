@@ -8,8 +8,52 @@ services:
     ports:
       - 5174:5173
     command: /bin/bash
+    environment:
+      - API_KEY={API_KEY}
     # command:
     #   - /bin/bash
     #   - -c
     #   - |
     #     npm run dev
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api:/api
+      - ./xmls:/api/xmls
+    command: /bin/bash
+    tty: true
+    working_dir: /api
+    environment:
+      - DB_USERNAME=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - DB_HOST=db
+      - DB_PORT=${POSTGRES_PORT}
+
+  db:
+    image: kartoza/postgis:16
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_MULTIPLE_EXTENSIONS=postgis
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "15433:5432"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "PGPASSWORD=$${POSTGRES_PASSWORD} psql -h localhost -U $${POSTGRES_USER} -d $${POSTGRES_DB} -c 'SELECT 1' || exit 1",
+        ]
+      interval: 3s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
