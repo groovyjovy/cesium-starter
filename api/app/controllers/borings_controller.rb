@@ -1,9 +1,12 @@
 class BoringsController < ApplicationController
   def index
+    require 'combine_geojson_generator'
+
     bbox = params.require(:bbox).split(',').map(&:to_f)
     min_lon, min_lat, max_lon, max_lat = bbox
 
-    borings = Boring.where(
+    # 範囲内の `Boring` を取得
+    borings = Boring.includes(:layers).where(
       "ST_Contains(
         ST_MakeEnvelope(?, ?, ?, ?, 4326),
         latlon
@@ -11,7 +14,12 @@ class BoringsController < ApplicationController
       min_lat, min_lon, max_lat, max_lon
     )
 
-    render json: borings
+    # GeoJSON の生成
+    generator = CombineGeojsonGenerator.new(borings)
+    geojson = generator.generate_geojson
+
+    # レスポンスとして返す
+    render json: JSON.pretty_generate(JSON.parse(geojson)), status: :ok
   end
 
   def create
@@ -49,9 +57,6 @@ class BoringsController < ApplicationController
           latlon: "POINT(#{lat} #{lon})",
           kunijiban_id: boring_params[:kunijiban_id].to_i
         )
-        if boring.nil?
-          debugger
-        end
         LayersCreater.new(doc:, boring:).call
       end
     rescue StandardError => e

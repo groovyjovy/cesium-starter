@@ -60,9 +60,6 @@ class BaseLayersCreater
         soil_symbol: detect_soil_symbol(layer:, params:),
         soil_color: detect_soil_color(layer:, params:, next_depth:),
       )
-      if created_layer.nil?
-        debugger
-      end
       @top = @bottom
     end
   end
