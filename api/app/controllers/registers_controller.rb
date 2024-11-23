@@ -11,7 +11,6 @@ class RegistersController < ApplicationController
     Ratlon.to_decimal(degree: doc.xpath('//lon_d').text.to_i, minute: doc.xpath('//lon_m').text.to_i,
                       second: doc.xpath('//lon_s').text.to_i)
 
-    debugger
     render json: { message: 'Hello, world!' }
   end
 end

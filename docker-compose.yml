@@ -25,6 +25,7 @@ services:
     volumes:
       - ./api:/api
       - ./xmls:/api/xmls
+      - ./geojsons:/api/geojsons
     command: /bin/bash
     tty: true
     working_dir: /api
